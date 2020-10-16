@@ -1,9 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dnfzsh177/image/upload/v1595081917/rxyyucmoj128gp565s1m8cd1amma.jpg');">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dnfzsh177/image/upload/v1602846445/Johanna_bdscho.jpg');">
   <div class="container">
-    <h1>Hi, I'm Johanna.</h1>
-    <p>And I'm looking for a new room and I hate it. </p>
+    <h1 id="typing" style="font-size:100px"></h1>
   </div>
 </div>
 
 
-<svg preserveAspectRatio="none" style="fill:lightgray;max-width:1024px;height:64px;min-width:100%;margin-top:-64px;color" class="absolute menu-wave " direction="up" color="#F5EEE8" viewBox="0 0 1024 64" xmlns="http://www.w3.org/2000/svg"><path class="fill-current" d="M0 8C66.6278 8 157.989 30.6667 257.463 30.6667C356.937 30.6667 403.749 14.6667 512 14.6667C620.251 14.6667 642.194 30.6667 768 30.6667C893.806 30.6667 949.394 0 1024 0V64H0V8Z"></path></svg>
+<svg preserveAspectRatio="none" style="fill:#F4F4F4;max-width:1024px;height:64px;min-width:100%;margin-top:-64px;color" class="absolute menu-wave " direction="up" color="#F5EEE8" viewBox="0 0 1024 64" xmlns="http://www.w3.org/2000/svg"><path class="fill-current" d="M0 8C66.6278 8 157.989 30.6667 257.463 30.6667C356.937 30.6667 403.749 14.6667 512 14.6667C620.251 14.6667 642.194 30.6667 768 30.6667C893.806 30.6667 949.394 0 1024 0V64H0V8Z"></path></svg>
+
+<script>
+var i = 0;
+var txt = 'Hallo.';
+var speed = 80;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("typing").classList.add("typing");
+    document.getElementById("typing").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
