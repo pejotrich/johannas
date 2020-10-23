@@ -12,6 +12,36 @@
   </head>
 
   <body onload="typeWriter()">
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+       <%= link_to "New word", new_word_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+       <%= link_to "Reset All", reset_all_words_path, :method => :get, class: "nav-link"%>
+      </li>
+      <li class="nav-item">
+       <%= link_to "Remove All", remove_all_words_path, :method => :get, class: "nav-link"  %>
+      </li>
+     
+    </ul>
+  </div>
+</div>
+<div class="container">
     <%= yield %>
+</div>
   </body>
 </html>

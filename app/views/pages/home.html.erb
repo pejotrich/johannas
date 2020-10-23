@@ -1,4 +1,15 @@
 
+<% @words = Word.where(status: false) %>
+<% if @words.empty? %>
+  <p>No words available</p>
+  <%= link_to "Enter new word", new_word_path %>
+<% else %>
+  <% @word = @words.sample %>
+  <%= link_to "show word",  word_path(@word)%>
+<% end %>
+
+
+
 
 
 <%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://res.cloudinary.com/dnfzsh177/image/upload/v1602846445/Johanna_bdscho.jpg');">
